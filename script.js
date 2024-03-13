@@ -257,7 +257,14 @@ function multiply(){
 function divide(){
     let a = parseFloat(operands[0]);
     let b = parseFloat(operands[1]);
-    let result = a / b;
+    let result
+    if(b === 0){
+        result = a;
+        console.log('Cannot divide by 0, cancelling operation.');
+    }
+    else{
+        result = a / b;
+    }
     return result.toString();
 }
 
