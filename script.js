@@ -29,7 +29,12 @@ operatorButtons.forEach(
 
 equalButton.addEventListener('click', processEqual);
 
+undoButton.addEventListener('click', processUndo);
+
 pageBody,addEventListener('keypress', processKey);
+
+//Backspace only fires on keydown event, not keypress
+pageBody.addEventListener('keydown', processBackspaceKey);
 /******************************************************/
 /********************Functions*************************/
 /******************************************************/
@@ -111,8 +116,27 @@ function processEqual(){
     else console.log('Enter operation first!');
 }
 
+function processUndo(){
+    if(!checkIfOperandEmpty(1)){
+        setOperand(1, getOperand(1).substring(0, getOperand(1).length - 1));
+    }
+    else if(!checkIfOperatorEmpty()){
+        setOperator('');
+    }
+    else if(!checkIfOperandEmpty(0)){
+        setOperand(0, getOperand(0).substring(0, getOperand(0).length - 1));        
+    }
+    else{
+        console.log('Nothing to erase!');
+        return undefined;
+    }
+    clearScreen();
+    writeScreen(getOperand(0).concat(getOperator()).concat(getOperand(1)));
+}
+
 function processKey(e){
     const keyPressed = e.key;
+
     if(DIGIT_KEYS.findIndex(el => el === keyPressed) > -1){
         processDigitKeyboard(keyPressed);
     }
@@ -127,6 +151,14 @@ function processKey(e){
     }
     else{
         console.log('Invalid key!');
+    }
+}
+
+function processBackspaceKey(e){
+    const keyPressed = e.key;
+
+    if(keyPressed === 'Backspace'){
+        processUndo();
     }
 }
 
