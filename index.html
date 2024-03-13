@@ -9,40 +9,49 @@
         <h1>Welcome to the calculator webpage!</h1>
         <div class="calc-container">
             <div class="calc-screen">
-                <p>150.32569</p>
+                <p></p>
             </div>
             <div class="calc-buttons">
                 <div class="first-column">
-                    <button type="button">7</button>
-                    <button type="button">4</button>
-                    <button type="button">1</button>
-                    <button type="button">0</button>
+                    <button type="button" class="digit-button">7</button>
+                    <button type="button" class="digit-button">4</button>
+                    <button type="button" class="digit-button">1</button>
+                    <button type="button" class="digit-button">0</button>
                 </div>
                 <div class="second-column">
-                    <button type="button">8</button>
-                    <button type="button">5</button>
-                    <button type="button">2</button>
-                    <button type="button">.</button>
+                    <button type="button" class="digit-button">8</button>
+                    <button type="button" class="digit-button">5</button>
+                    <button type="button" class="digit-button">2</button>
+                    <button type="button" class="digit-button">.</button>
                 </div>
                 <div class="third-column">
-                    <button type="button">9</button>
-                    <button type="button">0</button>
-                    <button type="button">3</button>
-                    <button type="button">=</button>
+                    <button type="button" class="digit-button">9</button>
+                    <button type="button" class="digit-button">6</button>
+                    <button type="button" class="digit-button">3</button>
+                    <button type="button" id="equal-button">=</button>
                 </div>
                 <div class="fourth-column">
-                    <button type="button">+</button>
-                    <button type="button">-</button>
-                    <button type="button">x</button>
-                    <button type="button">/</button>
+                    <button type="button" class="operator">+</button>
+                    <button type="button" class="operator">-</button>
+                    <button type="button" class="operator">x</button>
+                    <button type="button" class="operator">/</button>
                 </div>
                 <div class="fifth-column">
-                    <button type="button">^</button>
-                    <button type="button">√</button>                    
-                    <button type="button">Clear</button>
-                    <button type="button">Undo</button>
+                    <button type="button" class="operator">^</button>
+                    <button type="button" class="operator">√</button>                    
+                    <button type="button" id="clear-button">Clear</button>
+                    <button type="button" id="undo-button">Undo</button>
                 </div>
             </div>
+        </div>
+        <div class=notes>
+            <p>Keyboard is supported for the following keys.</p>
+            <ul>
+                <li>Any digit key</li>
+                <li>The dot key for decimal points</li>
+                <li>The equal key</li>
+                <li>The 'c' key (to clear the calculator)</li>
+            </ul>
         </div>
     </html>
 </html>

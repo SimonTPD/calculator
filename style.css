@@ -4,9 +4,9 @@ h1{
 
 .calc-container{
     box-sizing: border-box;
-    width: 550px;
+    width: 500px;
     height: 450px;
-    padding: 16px 32px;
+    padding: 16px 24px;
     margin: 8px auto;
     border: none;
     border-radius: 16px;
@@ -19,9 +19,10 @@ h1{
 }
 
 .calc-screen{
-    border: black 2px solid;
+    height: 60px;
+    padding: 0 12px;
+    border: none;
     border-radius: 12px;
-    height: 50px;
     background-color: black;
     display: flex;
     flex-direction: column;
@@ -30,10 +31,11 @@ h1{
 }
 
 .calc-screen p{
-    margin: 4px;
+    margin: none;
     text-align: right;
     color: rgb(255, 255, 255);
-    font-size: 32px;
+    font-size: 40px;
+    font-weight: bold;
 }
 
 .calc-buttons{
@@ -55,4 +57,17 @@ button{
     height: 80px;
     border-radius: 6px;
     font-size: 20px;
+}
+
+button#equal-button{
+    background-color: rgb(63, 76, 255);
+}
+
+button#clear-button{
+    background-color: rgb(238, 0, 0);
+}
+
+div.notes{
+    width: 500px;
+    margin: 24px auto;
 }
